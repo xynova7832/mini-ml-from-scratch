@@ -9,3 +9,11 @@ def mse(y_true, y_pred):
     pred_error = y_pred - y_true
     total = np.square(pred_error)
     return np.mean(total)
+
+
+def cce(correct_prob):
+    eps = 1e-15
+    return -np.mean(np.log(correct_prob + eps))
+
+
+cce(0.80)

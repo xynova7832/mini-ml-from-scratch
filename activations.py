@@ -11,7 +11,10 @@ def relu(x):
 
 def sigmoid(x):
     x = np.array([-5, -2, 0, 2, 5])
+    # An activation function doesn't really clean the dataset.
     return 1/(1 + np.exp(-x))
+    # It transforms the numbers flowing through the neural network so
+    # the network can learn complex patterns.
 
 
 def softmax(x):
